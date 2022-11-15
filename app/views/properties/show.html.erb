@@ -1,0 +1,14 @@
+<p style="color: green"><%= notice %></p>
+
+<%= render @property %>
+
+<!--img = property.photos.present? ? property.photos : "https://upload.wikimedia.org/wikipedia/commons/9/97/IU_at_Broker_GV_preview%2C_8_June_2022.jpg"-->
+<%#= image_tag(img, style:'width:50%') %>
+<%= image_tag(@property.photos, style:'width:50%') %>
+
+<div>
+  <%= link_to "Edit this property", edit_property_path(@property) %> |
+  <%= link_to "Back to properties", properties_path %>
+
+  <%= button_to "Destroy this property", @property, method: :delete %>
+</div>
